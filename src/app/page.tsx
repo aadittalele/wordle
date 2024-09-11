@@ -4,7 +4,7 @@ import { generate } from "random-words";
 import { useCookies } from "react-cookie";
 import EndScreen from "@/components/EndScreen";
 
-export default function Home({ initialGrid }: { initialGrid: [string, string][][] }) {
+export default function Home({ initialGrid }: { initialGrid?: [string, string][][] }) {
   const gridRef = useRef<HTMLDivElement>(null);
   const [cookies, setCookie, removeCookie] = useCookies(["answer"]);
   const [answer, setAnswer] = useState("blank");
