@@ -133,7 +133,7 @@ export default function Game({ initialGrid }: { initialGrid?: [string, string][]
       <EndScreen grid={endScreenProps.grid} status={endScreenProps.status} answer={endScreenProps.answer} />
     :
       <div className="flex flex-col items-center outline-none min-h-screen px-6 pt-6 bg-black text-white" tabIndex={0} onClick={focusOnGrid} onKeyDown={keyPress}>
-        <p className="text-5xl font-bold py-5">A Wordle Clone</p>
+        <p className="text-5xl font-bold py-5">A Wordle Clone (no mobile yet)</p>
         <div className="text-4xl p-6">
           {grid.map((v_, y) => (
             <div className={`flex my-3 ${animation && y == yPos ? "animate-wiggle" : ""}`} key={y}>
