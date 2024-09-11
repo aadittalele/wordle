@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes: {
+        wiggle: {
+          "0%": { transform: "translateX(-10px)" },
+          "25%": { transform: "translateX(10px)" },
+          "50%": { transform: "translateX(-10px)" },
+          "75%": { transform: "translateX(10px)" },
+          "100%": { transform: "translateX(0px)" }
+        }
       },
+      animation: {
+        wiggle: 'wiggle ease-out 0.3s',
+      }
     },
   },
   plugins: [],
